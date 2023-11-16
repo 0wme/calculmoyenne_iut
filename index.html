@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculateur de Moyenne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculateur de Moyenne</h1>
+    <form id="noteForm">
+        <div>
+            <label for="maths">Note en Maths:</label>
+            <input type="number" id="maths" name="maths">
+            <label for="coefMaths">Coefficient:</label>
+            <input type="number" id="coefMaths" name="coefMaths">
+        </div>
+        <div>
+            <label for="francais">Note en Français:</label>
+            <input type="number" id="francais" name="francais">
+            <label for="coefFrancais">Coefficient:</label>
+            <input type="number" id="coefFrancais" name="coefFrancais">
+        </div>
+        <!-- Ajouter d'autres matières ici si nécessaire -->
+        <button type="button" onclick="calculerMoyenne()">Calculer la Moyenne</button>
+    </form>
+    <div id="resultat"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
