@@ -71,6 +71,6 @@ function calculerMoyenne() {
         }
     }
     var moyenne = totalPoints / totalCoefs;
-    document.getElementById('moyenne').innerHTML = moyenne.toFixed(2);
+    document.getElementById('resultat').innerHTML = 'Votre moyenne générale est de ' + moyenne.toFixed(2);
 }
    
