@@ -2,27 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Calculateur de Moyenne</title>
+    <title>Calculateur de Moyenne par Compétence</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculateur de Moyenne</h1>
-    <form id="noteForm">
-        <div>
-            <label for="maths">Note en Maths:</label>
-            <input type="number" id="maths" name="maths">
-            <label for="coefMaths">Coefficient:</label>
-            <input type="number" id="coefMaths" name="coefMaths">
-        </div>
-        <div>
-            <label for="francais">Note en Français:</label>
-            <input type="number" id="francais" name="francais">
-            <label for="coefFrancais">Coefficient:</label>
-            <input type="number" id="coefFrancais" name="coefFrancais">
-        </div>
-        <!-- Ajouter d'autres matières ici si nécessaire -->
-        <button type="button" onclick="calculerMoyenne()">Calculer la Moyenne</button>
-    </form>
+    <h1>Calculateur de Moyenne par Compétence</h1>
+    <div id="menuCompetences">
+        <button onclick="afficherFormulaire('competence3_1')">Compétence 3.1</button>
+        <button onclick="afficherFormulaire('competence3_2')">Compétence 3.2</button>
+        <button onclick="afficherFormulaire('competence3_3')">Compétence 3.3</button>
+        <button onclick="afficherFormulaire('competence3_4')">Compétence 3.4</button>
+        <button onclick="afficherFormulaire('competence3_5')">Compétence 3.5</button>
+        <button onclick="afficherFormulaire('competence3_6')">Compétence 3.6</button>
+    </div>
+    <div id="formulaireNotes"></div>
     <div id="resultat"></div>
 
     <script src="script.js"></script>
