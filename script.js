@@ -160,6 +160,8 @@ function calculerMoyenne() {
     resultat.innerHTML = 'Votre moyenne est de ' + moyenne.toFixed(2);}
 
 
+ // Animation de la page d'accueil
+
 document.addEventListener("DOMContentLoaded", function() {
 
     let canvas = document.querySelector('canvas');
@@ -230,7 +232,6 @@ document.addEventListener("DOMContentLoaded", function() {
             x1 = particles[i].x;
             y1 = particles[i].y;
 
-            // Draw line from particle to cursor
             length = Math.sqrt(Math.pow(mouseX - x1, 2) + Math.pow(mouseY - y1, 2));
             if (length < properties.lineLength) {
                 opacity = 1 - length / properties.lineLength;
