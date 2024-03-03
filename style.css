@@ -23,3 +23,8 @@ div {
 label, input {
     margin-right: 5px;
 }
+
+#menuCompetences {
+    display: flex;
+    flex-direction: column;
+}
