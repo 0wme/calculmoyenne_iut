@@ -12,7 +12,6 @@ function afficherCompetences(semestre) {
 // Fonction pour afficher le formulaire en fonction de la compétence sélectionnée
 function afficherFormulaire(competence) {
     var formulaire = '';
-    // Map your competences to the right function to create the form
     var competenceFunctionMap = {
         'competence4_1': creerFormulaireComp4_1,
         'competence4_2': creerFormulaireComp4_2,
@@ -25,6 +24,8 @@ function afficherFormulaire(competence) {
     if (competenceFunctionMap[competence]) {
         formulaire = competenceFunctionMap[competence]();
     }
+
+    formulaire += '<button onclick="calculerMoyenne()">Calculer la moyenne</button>'; // Add the validation button
 
     document.getElementById('formulaireNotes').innerHTML = formulaire;
 }
