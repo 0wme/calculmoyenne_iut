@@ -33,7 +33,7 @@ label, input {
     margin-right: 5px;
 }
 
-#menuCompetences, #menuSemestres {
+#menuCompetences {
     display: flex;
     flex-direction: column;
 }
