@@ -76,12 +76,29 @@ button:hover {
 }
 
 
-/* Bouton de calcul de la moyenne */
 .calculate-button {
     background-color: #28a745; /* Vert */
     border-radius: 20px; /* Bords plus arrondis */
+    padding: 10px 25px;
+    margin-top: 20px;
+    display: block; /* Rend le bouton en bloc pour permettre la centralisation */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .calculate-button:hover {
     background-color: #218838; /* Vert plus foncé au survol */
+}
+
+#noteForm table {
+    margin: 0 auto; /* Retire le centrage automatique pour la table */
+    width: fit-content; /* Assure que la table ne prend que l'espace nécessaire */
+}
+
+#noteForm td {
+    text-align: left; /* Assure que le texte dans les cellules est aligné à gauche */
+}
+
+#noteForm tr td:nth-child(1) {
+    text-align: right; /* Assure que les étiquettes sont alignées à droite */
 }
