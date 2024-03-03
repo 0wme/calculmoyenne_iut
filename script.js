@@ -34,6 +34,12 @@ function afficherFormulaire(competence) {
     formulaire += '<table>';
 
     var competenceFunctionMap = {
+        'competence3_1': creerFormulaireComp3_1,
+        'competence3_2': creerFormulaireComp3_2,
+        'competence3_3': creerFormulaireComp3_3,
+        'competence3_4': creerFormulaireComp3_4,
+        'competence3_5': creerFormulaireComp3_5,
+        'competence3_6': creerFormulaireComp3_6,
         'competence4_1': creerFormulaireComp4_1,
         'competence4_2': creerFormulaireComp4_2,
         'competence4_3': creerFormulaireComp4_3,
