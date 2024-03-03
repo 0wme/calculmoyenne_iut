@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Change this to column to align items vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -54,4 +54,34 @@ canvas {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Boutons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Bords arrondis */
+    background-color: #007bff; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+    margin: 5px; /* Espace autour des boutons */
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+
+/* Bouton de calcul de la moyenne */
+.calculate-button {
+    background-color: #28a745; /* Vert */
+    border-radius: 20px; /* Bords plus arrondis */
+}
+
+.calculate-button:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
 }
