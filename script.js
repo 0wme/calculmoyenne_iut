@@ -6,12 +6,12 @@ function afficherCompetences(semestre) {
         menuCompetences += '<button onclick="afficherFormulaire(\'competence' + competences[i] + '\')">Compétence ' + competences[i] + '</button>';
     }
     document.getElementById('menuCompetences').innerHTML = menuCompetences;
-    document.getElementById('formulaireNotes').innerHTML = ''; // Clear the previous form
+    document.getElementById('formulaireNotes').innerHTML = '';
 }
 
 // Fonction pour afficher le formulaire en fonction de la compétence sélectionnée
 function afficherFormulaire(competence) {
-    var formulaire = '';
+    var formulaire = '<form id="noteForm"><table>';
     var competenceFunctionMap = {
         'competence4_1': creerFormulaireComp4_1,
         'competence4_2': creerFormulaireComp4_2,
@@ -22,102 +22,114 @@ function afficherFormulaire(competence) {
     };
     
     if (competenceFunctionMap[competence]) {
-        formulaire = competenceFunctionMap[competence]();
+        formulaire += competenceFunctionMap[competence]();
     }
 
-    formulaire += '<button onclick="calculerMoyenne()">Calculer la moyenne</button>'; // Add the validation button
+    formulaire += '</table>';
+    formulaire += '<button type="button" onclick="calculerMoyenne()">Calculer la moyenne</button></form>'; // Add the validation button
 
     document.getElementById('formulaireNotes').innerHTML = formulaire;
 }
 
-// Fonction pour créer le formulaire pour la compétence 4.1
 function creerFormulaireComp4_1() {
     var formulaire = '';
-    formulaire += creerChampNote('Architecture logicielle', 'archiLogiciel', 1.50);
-    formulaire += creerChampNote('Qualité de développement', 'qualiteDev', 0.80);
-    formulaire += creerChampNote('Projet personnel et professionnel', 'projetPersoPro', 0.10);
-    formulaire += creerChampNote('Complément web', 'complementWeb', 0.80);
-    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMobile', 0.80);
-    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComplexe', 1.50);
+    formulaire += creerChampNote('Architecture logicielle', 'archiLog', 1.50);
+    formulaire += creerChampNote('Qualité de développement', 'qualDev', 0.80);
+    formulaire += creerChampNote('Projet personnel et professionnel', 'projPersoPro', 0.10);
+    formulaire += creerChampNote('Complément web', 'compWeb', 0.80);
+    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMob', 0.80);
+    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComp', 1.50);
     formulaire += creerChampNote('Stage', 'stage', 4.00);
     formulaire += creerChampNote('Portfolio', 'portfolio', 0.50);
     return formulaire;
 }
 
-// Fonction pour créer le formulaire pour la compétence 4.2
 function creerFormulaireComp4_2() {
     var formulaire = '';
-    formulaire += creerChampNote('Architecture logicielle', 'archiLogiciel', 1.50);
-    formulaire += creerChampNote('Qualité de développement', 'qualiteDev', 0.80);
-    formulaire += creerChampNote('Projet personnel et professionnel', 'projetPersoPro', 0.10);
-    formulaire += creerChampNote('Complément web', 'complementWeb', 0.80);
-    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMobile', 0.80);
-    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComplexe', 1.50);
+    formulaire += creerChampNote('Méthodes d\'optimisation', 'methOpt', 1.10);
+    formulaire += creerChampNote('Anglais', 'anglais', 0.40);
+    formulaire += creerChampNote('Projet personnel et professionnel', 'projPersoPro', 0.10);
+    formulaire += creerChampNote('Management avancé des systèmes d\'information', 'managInfo', 0.40);
+    formulaire += creerChampNote('Complément web', 'compWeb', 0.40);
+    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMob', 0.40);
+    formulaire += creerChampNote('Automates et Langages', 'autoLang', 1.20);
+    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComp', 1.50);
     formulaire += creerChampNote('Stage', 'stage', 4.00);
     formulaire += creerChampNote('Portfolio', 'portfolio', 0.50);
     return formulaire;
 }
 
-// Fonction pour créer le formulaire pour la compétence 4.3
 function creerFormulaireComp4_3() {
     var formulaire = '';
-    formulaire += creerChampNote('Architecture logicielle', 'archiLogiciel', 1.50);
-    formulaire += creerChampNote('Qualité de développement', 'qualiteDev', 0.80);
-    formulaire += creerChampNote('Projet personnel et professionnel', 'projetPersoPro', 0.10);
-    formulaire += creerChampNote('Complément web', 'complementWeb', 0.80);
-    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMobile', 0.80);
-    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComplexe', 1.50);
+    formulaire += creerChampNote('Architecture logicielle', 'archiLog', 1.20);
+    formulaire += creerChampNote('Projet personnel et professionnel', 'projPersoPro', 0.10);
+    formulaire += creerChampNote('Virtualisation', 'virtual', 2.70);
+    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComp', 1.50);
     formulaire += creerChampNote('Stage', 'stage', 4.00);
     formulaire += creerChampNote('Portfolio', 'portfolio', 0.50);
     return formulaire;
 }
 
-// Fonction pour créer le formulaire pour la compétence 4.4
 function creerFormulaireComp4_4() {
     var formulaire = '';
-    formulaire += creerChampNote('Architecture logicielle', 'archiLogiciel', 1.50);
-    formulaire += creerChampNote('Qualité de développement', 'qualiteDev', 0.80);
-    formulaire += creerChampNote('Projet personnel et professionnel', 'projetPersoPro', 0.10);
-    formulaire += creerChampNote('Complément web', 'complementWeb', 0.80);
-    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMobile', 0.80);
-    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComplexe', 1.50);
+    formulaire += creerChampNote('Qualité et au-delà du relationnel', 'qualRel', 1.80);
+    formulaire += creerChampNote('Communication interne', 'commInterne', 0.50);
+    formulaire += creerChampNote('Projet personnel et professionnel', 'projPersoPro', 0.10);
+    formulaire += creerChampNote('Complément web', 'compWeb', 0.80);
+    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMob', 0.80);
+    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComp', 1.50);
     formulaire += creerChampNote('Stage', 'stage', 4.00);
     formulaire += creerChampNote('Portfolio', 'portfolio', 0.50);
     return formulaire;
 }
 
-// Fonction pour créer le formulaire pour la compétence 4.5
 function creerFormulaireComp4_5() {
     var formulaire = '';
-    formulaire += creerChampNote('Architecture logicielle', 'archiLogiciel', 1.50);
-    formulaire += creerChampNote('Qualité de développement', 'qualiteDev', 0.80);
-    formulaire += creerChampNote('Projet personnel et professionnel', 'projetPersoPro', 0.10);
-    formulaire += creerChampNote('Complément web', 'complementWeb', 0.80);
-    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMobile', 0.80);
-    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComplexe', 1.50);
+    formulaire += creerChampNote('Qualité de développement', 'qualDev', 1.00);
+    formulaire += creerChampNote('Projet personnel et professionnel', 'projPersoPro', 0.10);
+    formulaire += creerChampNote('Management avancé des systèmes d\'information', 'managInfo', 2.10);
+    formulaire += creerChampNote('Complément web', 'compWeb', 0.40);
+    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMob', 0.40);
+    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComp', 1.50);
     formulaire += creerChampNote('Stage', 'stage', 4.00);
     formulaire += creerChampNote('Portfolio', 'portfolio', 0.50);
     return formulaire;
 }
 
-// Fonction pour créer le formulaire pour la compétence 4.6
 function creerFormulaireComp4_6() {
     var formulaire = '';
-    formulaire += creerChampNote('Architecture logicielle', 'archiLogiciel', 1.50);
-    formulaire += creerChampNote('Qualité de développement', 'qualiteDev', 0.80);
-    formulaire += creerChampNote('Projet personnel et professionnel', 'projetPersoPro', 0.10);
-    formulaire += creerChampNote('Complément web', 'complementWeb', 0.80);
-    formulaire += creerChampNote('Développement pour applications mobiles', 'devAppMobile', 0.80);
-    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComplexe', 1.50);
+    formulaire += creerChampNote('Architecture logicielle', 'archiLog', 0.40);
+    formulaire += creerChampNote('Anglais', 'anglais', 1.30);
+    formulaire += creerChampNote('Communication interne', 'commInterne', 1.30);
+    formulaire += creerChampNote('Projet personnel et professionnel', 'projPersoPro', 1.00);
+    formulaire += creerChampNote('Développement d\'une application complexe', 'devAppComp', 1.50);
     formulaire += creerChampNote('Stage', 'stage', 4.00);
     formulaire += creerChampNote('Portfolio', 'portfolio', 0.50);
     return formulaire;
 }
+
+// Fonction pour créer un champ de note
 function creerChampNote(nomMatiere, id, coef) {
-    return '<div><label for="' + id + '">' + nomMatiere + ':</label>' +
-           '<input type="number" id="' + id + '" name="' + id + '">' +
-           '<label for="coef' + id + '">Coefficient:</label>' +
-           '<input type="number" value="' + coef + '" id="coef' + id + '" name="coef' + id + '" readonly></div>';
+    return '<tr>' +
+           '<td><label for="' + id + '">' + nomMatiere + ':</label></td>' +
+           '<td><input type="number" id="' + id + '" name="' + id + '" style="width: 50px;" oninput="miseAJourNoteCoef(\'' + id + '\')"></td>' +
+           '<td><label for="coef' + id + '">Coefficient:</label></td>' +
+           '<td><input type="number" value="' + coef + '" id="coef' + id + '" name="coef' + id + '" readonly style="width: 50px;"></td>' +
+           '<td id="result' + id + '"></td>' +
+           '</tr>';
+}
+
+// Fonction pour mettre à jour la note multipliée par le coefficient
+function miseAJourNoteCoef(id) {
+    var noteElement = document.getElementById(id);
+    var coefElement = document.getElementById('coef' + id);
+    var resultElement = document.getElementById('result' + id);
+    if (noteElement && coefElement && resultElement) {
+        var note = parseFloat(noteElement.value) || 0;
+        var coef = parseFloat(coefElement.value);
+        var noteCoef = note * coef;
+        resultElement.innerText = noteCoef.toFixed(2);
+    }
 }
 
 // Fonction pour calculer la moyenne
@@ -132,13 +144,13 @@ function calculerMoyenne() {
             var noteId = element.name.substring(4);
             var noteElement = document.getElementById(noteId);
             if (noteElement) {
-                var note = parseFloat(noteElement.value);
+                var note = parseFloat(noteElement.value) || 0;
                 var coef = parseFloat(element.value);
                 totalPoints += note * coef;
                 totalCoefs += coef;
             }
         }
     }
-    var moyenne = totalPoints / totalCoefs;
-    document.getElementById('resultat').innerHTML = 'Votre moyenne générale est de ' + moyenne.toFixed(2);
+    var moyenne = totalCoefs > 0 ? totalPoints / totalCoefs : 0;
+    document.getElementById('resultat').innerHTML = 'Votre moyenne est de ' + moyenne.toFixed(2);
 }
