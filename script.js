@@ -13,9 +13,14 @@ function afficherCompetences(semestre) {
 }
 
 // Fonction pour afficher le formulaire en fonction de la compétence sélectionnée
-// Fonction pour afficher le formulaire en fonction de la compétence sélectionnée
 function afficherFormulaire(competence) {
     var competenceTitleMap = {
+        'competence3_1': 'UE 3.1 Réaliser un développement d\'application',
+        'competence3_2': 'UE 3.2 Optimiser des applications',
+        'competence3_3': 'UE 3.3 Administrer des systèmes informatiques communicants',
+        'competence3_4': 'UE 3.4 Gérer des données de l\'information',
+        'competence3_5': 'UE 3.5 Conduire un projet',
+        'competence3_6': 'UE 3.6 Collaborer au sein d\'une équipe informatique',
         'competence4_1': 'UE 4.1 Réaliser un développement d\'application',
         'competence4_2': 'UE 4.2 Optimiser des applications',
         'competence4_3': 'UE 4.3 Administrer des systèmes informatiques communicants complexes',
