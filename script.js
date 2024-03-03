@@ -13,8 +13,21 @@ function afficherCompetences(semestre) {
 }
 
 // Fonction pour afficher le formulaire en fonction de la compétence sélectionnée
+// Fonction pour afficher le formulaire en fonction de la compétence sélectionnée
 function afficherFormulaire(competence) {
-    var formulaire = '<form id="noteForm"><table>';
+    var competenceTitleMap = {
+        'competence4_1': 'UE 4.1 Réaliser un développement d\'application',
+        'competence4_2': 'UE 4.2 Optimiser des applications',
+        'competence4_3': 'UE 4.3 Administrer des systèmes informatiques communicants complexes',
+        'competence4_4': 'UE 4.4 Gérer des données de l\'information',
+        'competence4_5': 'UE 4.5 Conduire un projet',
+        'competence4_6': 'UE 4.6 Collaborer au sein d\'une équipe informatique'
+    };
+
+    var formulaire = '<form id="noteForm">';
+    formulaire += '<h2 class="competence-title">' + (competenceTitleMap[competence] || 'Compétence') + '</h2>';
+    formulaire += '<table>';
+
     var competenceFunctionMap = {
         'competence4_1': creerFormulaireComp4_1,
         'competence4_2': creerFormulaireComp4_2,
@@ -30,9 +43,11 @@ function afficherFormulaire(competence) {
 
     formulaire += '</table>';
     formulaire += '<div class="button-container"><button type="button" class="calculate-button" onclick="calculerMoyenne()">Calculer la moyenne</button></div>';
+    formulaire += '</form>';
 
     document.getElementById('formulaireNotes').innerHTML = formulaire;
 }
+
 
 function creerFormulaireComp4_1() {
     var formulaire = '';
