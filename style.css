@@ -23,6 +23,8 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(252, 252, 252);
+    width: fit-content; /* Ajuste la largeur du formulaire au contenu */
+    margin: auto; /* Centre le formulaire sur la page */
 }
 
 div {
@@ -33,10 +35,7 @@ label, input {
     margin-right: 5px;
 }
 
-#menuCompetences {
-    display: flex;
-    flex-direction: column;
-}
+
 
 /* ---------------------- Background Animation ---------------------- */
 
@@ -91,14 +90,10 @@ button:hover {
 }
 
 #noteForm table {
-    margin: 0 auto; /* Retire le centrage automatique pour la table */
-    width: fit-content; /* Assure que la table ne prend que l'espace nécessaire */
-}
-
-#noteForm td {
-    text-align: left; /* Assure que le texte dans les cellules est aligné à gauche */
+    margin: 0 auto;
+    width: fit-content; 
 }
 
 #noteForm tr td:nth-child(1) {
-    text-align: right; /* Assure que les étiquettes sont alignées à droite */
+    text-align: right;
 }
