@@ -29,7 +29,7 @@ function afficherFormulaire(competence) {
     }
 
     formulaire += '</table>';
-    formulaire += '<button type="button" class="calculate-button" onclick="calculerMoyenne()">Calculer la moyenne</button></form>';
+    formulaire += '<div class="button-container"><button type="button" class="calculate-button" onclick="calculerMoyenne()">Calculer la moyenne</button></div>';
 
     document.getElementById('formulaireNotes').innerHTML = formulaire;
 }
