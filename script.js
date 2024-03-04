@@ -49,6 +49,18 @@ function afficherFormulaire(competence) {
     formulaire += '<table>';
 
     var competenceFunctionMap = {
+        'competence1_1': creerFormulaireComp1_1,
+        'competence1_2': creerFormulaireComp1_2,
+        'competence1_3': creerFormulaireComp1_3,
+        'competence1_4': creerFormulaireComp1_4,
+        'competence1_5': creerFormulaireComp1_5,
+        'competence1_6': creerFormulaireComp1_6,
+        'competence2_1': creerFormulaireComp2_1,
+        'competence2_2': creerFormulaireComp2_2,
+        'competence2_3': creerFormulaireComp2_3,
+        'competence2_4': creerFormulaireComp2_4,
+        'competence2_5': creerFormulaireComp2_5,
+        'competence2_6': creerFormulaireComp2_6,
         'competence3_1': creerFormulaireComp3_1,
         'competence3_2': creerFormulaireComp3_2,
         'competence3_3': creerFormulaireComp3_3,
@@ -73,6 +85,135 @@ function afficherFormulaire(competence) {
 
     document.getElementById('formulaireNotes').innerHTML = formulaire;
 }
+
+function creerFormulaireComp1_1() {
+    var formulaire = '';
+    formulaire += creerChampNote('Initiation au développement', 'initDev1_1', 4.20);
+    formulaire += creerChampNote('Développement d\'interfaces web', 'devWeb1_1', 1.20);
+    formulaire += creerChampNote('Anglais', 'anglais1_1', 0.50);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro1_1', 0.10);
+    formulaire += creerChampNote('Implémentation d\'un besoin client', 'impBesoinClient1_1', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp1_2() {
+    var formulaire = '';
+    formulaire += creerChampNote('Initiation au développement', 'initDev1_2', 2.40);
+    formulaire += creerChampNote('Introduction à l\'architecture des ordinateurs', 'introArchOrd1_2', 0.60);
+    formulaire += creerChampNote('Mathématiques discrètes', 'mathDiscretes1_2', 1.50);
+    formulaire += creerChampNote('Outils mathématiques fondamentaux', 'outilsMathFond1_2', 1.40);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro1_2', 0.10);
+    formulaire += creerChampNote('Comparaison d\'approches algorithmiques', 'compApprochesAlgo1_2', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp1_3() {
+    var formulaire = '';
+    formulaire += creerChampNote('Introduction à l\'architecture des ordinateurs', 'introArchOrd1_3', 2.10);
+    formulaire += creerChampNote('Introduction aux systèmes d\'exploitation et à leur fonctionnement', 'introSysExp1_3', 2.10);
+    formulaire += creerChampNote('Anglais', 'anglais1_3', 1.20);
+    formulaire += creerChampNote('Bases de la communication', 'basesComm1_3', 0.50);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro1_3', 0.10);
+    formulaire += creerChampNote('Installation d\'un poste pour le développement', 'installPosteDev1_3', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp1_4() {
+    var formulaire = '';
+    formulaire += creerChampNote('Introduction aux bases de données et SQL', 'introBDDSQL1_4', 3.60);
+    formulaire += creerChampNote('Mathématiques discrètes', 'mathDiscretes1_4', 1.70);
+    formulaire += creerChampNote('Introduction à l\'économie durable et numérique', 'introEcoDurableNum1_4', 0.60);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro1_4', 0.10);
+    formulaire += creerChampNote('Création d\'une base de données', 'creationBDD1_4', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp1_5() {
+    var formulaire = '';
+    formulaire += creerChampNote('Développement d\'interfaces web', 'devWeb1_5', 1.80);
+    formulaire += creerChampNote('Introduction à la gestion des organisations', 'introGestOrg1_5', 2.60);
+    formulaire += creerChampNote('Bases de la communication', 'basesComm1_5', 1.50);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro1_5', 0.10);
+    formulaire += creerChampNote('Recueil de besoins', 'recueilBesoins1_5', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp1_6() {
+    var formulaire = '';
+    formulaire += creerChampNote('Développement d\'interfaces web', 'devWeb1_6', 0.50);
+    formulaire += creerChampNote('Introduction à la gestion des organisations', 'introGestOrg1_6', 1.10);
+    formulaire += creerChampNote('Introduction à l\'économie durable et numérique', 'introEcoDurableNum1_6', 1.10);
+    formulaire += creerChampNote('Anglais', 'anglais1_6', 1.10);
+    formulaire += creerChampNote('Bases de la communication', 'basesComm1_6', 1.10);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro1_6', 1.10);
+    formulaire += creerChampNote('Découverte de l\'environnement économique et écologique', 'decouverteEnvEcoEco1_6', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp2_1() {
+    var formulaire = '';
+    formulaire += creerChampNote('Développement d\'interfaces web', 'devWeb2_1', 2.80);
+    formulaire += creerChampNote('Introduction aux systèmes d\'exploitation et à leur fonctionnement', 'introSysExp2_1', 1.20);
+    formulaire += creerChampNote('Anglais', 'anglais2_1', 0.50);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro2_1', 0.10);
+    formulaire += creerChampNote('Développement d\'une application web', 'devAppWeb2_1', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp2_2() {
+    var formulaire = '';
+    formulaire += creerChampNote('Introduction aux bases de données et SQL', 'introBDDSQL2_2', 2.40);
+    formulaire += creerChampNote('Introduction à l\'architecture des ordinateurs', 'introArchOrd2_2', 0.60);
+    formulaire += creerChampNote('Mathématiques discrètes', 'mathDiscretes2_2', 1.50);
+    formulaire += creerChampNote('Outils mathématiques fondamentaux', 'outilsMathFond2_2', 1.40);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro2_2', 0.10);
+    formulaire += creerChampNote('Création d\'une base de données', 'creationBDD2_2', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp2_3() {
+    var formulaire = '';
+    formulaire += creerChampNote('Introduction à l\'architecture des ordinateurs', 'introArchOrd2_3', 2.10);
+    formulaire += creerChampNote('Introduction aux systèmes d\'exploitation et à leur fonctionnement', 'introSysExp2_3', 2.10);
+    formulaire += creerChampNote('Anglais', 'anglais2_3', 1.20);
+    formulaire += creerChampNote('Bases de la communication', 'basesComm2_3', 0.50);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro2_3', 0.10);
+    formulaire += creerChampNote('Installation d\'un poste pour le développement', 'installPosteDev2_3', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp2_4() {
+    var formulaire = '';
+    formulaire += creerChampNote('Introduction aux bases de données et SQL', 'introBDDSQL2_4', 3.60);
+    formulaire += creerChampNote('Mathématiques discrètes', 'mathDiscretes2_4', 1.70);
+    formulaire += creerChampNote('Introduction à l\'économie durable et numérique', 'introEcoDurableNum2_4', 0.60);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro2_4', 0.10);
+    formulaire += creerChampNote('Création d\'une base de données', 'creationBDD2_4', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp2_5() {
+    var formulaire = '';
+    formulaire += creerChampNote('Développement d\'interfaces web', 'devWeb2_5', 1.80);
+    formulaire += creerChampNote('Introduction à la gestion des organisations', 'introGestOrg2_5', 2.60);
+    formulaire += creerChampNote('Bases de la communication', 'basesComm2_5', 1.50);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro2_5', 0.10);
+    formulaire += creerChampNote('Recueil de besoins', 'recueilBesoins2_5', 4.00);
+    return formulaire;
+}
+
+function creerFormulaireComp2_6() {
+    var formulaire = '';
+    formulaire += creerChampNote('Développement d\'interfaces web', 'devWeb2_6', 0.50);
+    formulaire += creerChampNote('Introduction à la gestion des organisations', 'introGestOrg2_6', 1.10);
+    formulaire += creerChampNote('Introduction à l\'économie durable et numérique', 'introEcoDurableNum2_6', 1.10);
+    formulaire += creerChampNote('Anglais', 'anglais2_6', 1.10);
+    formulaire += creerChampNote('Bases de la communication', 'basesComm2_6', 1.10);
+    formulaire += creerChampNote('Projet professionnel et personnel', 'projPersPro2_6', 1.10);
+    formulaire += creerChampNote('Découverte de l\'environnement économique et écologique', 'decouverteEnvEcoEco2_6', 4.00);
+    return formulaire;
+}
+
 
 function creerFormulaireComp3_1() {
     var formulaire = '';
