@@ -4,7 +4,10 @@ AOS.init();
 // Fonction pour afficher les compétences en fonction du semestre sélectionné
 function afficherCompetences(semestre) {
     var menuCompetences = '';
-    var competences = semestre === 'semestre3' ? ['3_1', '3_2', '3_3', '3_4', '3_5', '3_6'] : ['4_1', '4_2', '4_3', '4_4', '4_5', '4_6'];
+    var competences =   semestre === 'semestre1' ? ['1_1', '1_2', '1_3', '1_4', '1_5', '1_6'] :
+                        semestre === 'semestre2' ? ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6'] :
+                        semestre === 'semestre3' ? ['3_1', '3_2', '3_3', '3_4', '3_5', '3_6'] : 
+                        semestre === 'semestre4' ? ['4_1', '4_2', '4_3', '4_4', '4_5', '4_6'] : [];
     for (var i = 0; i < competences.length; i++) {
         menuCompetences += '<button onclick="afficherFormulaire(\'competence' + competences[i] + '\')">Compétence ' + competences[i] + '</button>';
     }
@@ -15,6 +18,18 @@ function afficherCompetences(semestre) {
 // Fonction pour afficher le formulaire en fonction de la compétence sélectionnée
 function afficherFormulaire(competence) {
     var competenceTitleMap = {
+        'competence1_1': 'UE 1.1 Réaliser un développement d\'application',
+        'competence1_2': 'UE 1.2 Optimiser des applications',
+        'competence1_3': 'UE 1.3 Administrer des systèmes informatiques communicants complexes',
+        'competence1_4': 'UE 1.4 Gérer des données de l\'information',
+        'competence1_5': 'UE 1.5 Conduire un projet',
+        'competence1_6': 'UE 1.6 Collaborer au sein d\'une équipe informatique',
+        'competence2_1': 'UE 2.1 Réaliser un développement d\'application',
+        'competence2_2': 'UE 2.2 Optimiser des applications',
+        'competence2_3': 'UE 2.3 Administrer des systèmes informatiques communicants complexes',
+        'competence2_4': 'UE 2.4 Gérer des données de l\'information',
+        'competence2_5': 'UE 2.5 Conduire un projet',
+        'competence2_6': 'UE 2.6 Collaborer au sein d\'une équipe informatique',
         'competence3_1': 'UE 3.1 Réaliser un développement d\'application',
         'competence3_2': 'UE 3.2 Optimiser des applications',
         'competence3_3': 'UE 3.3 Administrer des systèmes informatiques communicants',
